@@ -5,7 +5,7 @@
     "baseName": "shopping",
     "packageName": "ca.ucalgary.assignment",
     "packageFolder": "ca/ucalgary/assignment",
-    "serverPort": 8080,
+    "serverPort": "8080",
     "serviceDiscoveryType": false,
     "authenticationType": "jwt",
     "cacheProvider": "ehcache",
@@ -42,7 +42,11 @@
     "clientTheme": "none",
     "clientThemeVariant": "",
     "reactive": false,
-    "enableGradleEnterprise": false
+    "enableGradleEnterprise": false,
+    "gradleEnterpriseHost": "",
+    "applicationIndex": 0,
+    "entities": ["Person", "ShoppingGroup", "Need", "Item"],
+    "lastLiquibaseTimestamp": 1637991573000
   },
   "git-provider": "GitHub",
   "git-company": "MjdBh",

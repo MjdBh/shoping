@@ -1,0 +1,29 @@
+{
+  "shoppingApp": {
+    "shoppingGroup": {
+      "home": {
+        "title": "Shopping Groups",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Shopping Group",
+        "createOrEditLabel": "Create or edit a Shopping Group",
+        "notFound": "No Shopping Groups found"
+      },
+      "created": "A new Shopping Group is created with identifier {{ param }}",
+      "updated": "A Shopping Group is updated with identifier {{ param }}",
+      "deleted": "A Shopping Group is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Shopping Group {{ id }}?"
+      },
+      "detail": {
+        "title": "Shopping Group"
+      },
+      "id": "ID",
+      "name": "Name",
+      "createdAt": "Created At",
+      "item": "Item",
+      "createdBy": "Created By",
+      "subscribedPersons": "Subscribed Persons",
+      "joinedPersons": "Joined Persons"
+    }
+  }
+}
