@@ -1,0 +1,7 @@
+export enum ItemState {
+  AVAILABLE = 'AVAILABLE',
+
+  NOT_AVAILABLE = 'NOT_AVAILABLE',
+
+  SOLD_OUT = 'SOLD_OUT',
+}

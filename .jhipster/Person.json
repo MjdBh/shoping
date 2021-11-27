@@ -1,0 +1,69 @@
+{
+  "name": "Person",
+  "fields": [
+    {
+      "fieldName": "username",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "role",
+      "fieldType": "PersonRole",
+      "fieldValues": "ADMIN,USER"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "shoppingGroup",
+      "otherEntityRelationshipName": "createdBy",
+      "relationshipName": "shoppingGroup"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "item",
+      "otherEntityRelationshipName": "owner",
+      "relationshipName": "item"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "item",
+      "otherEntityRelationshipName": "interestedPersons",
+      "relationshipName": "interests",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "shoppingGroup",
+      "otherEntityRelationshipName": "subscribedPersons",
+      "relationshipName": "subscriptions",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "shoppingGroup",
+      "otherEntityRelationshipName": "joinedPersons",
+      "relationshipName": "joined",
+      "ownerSide": true
+    }
+  ],
+  "entityTableName": "person",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["shopping"],
+  "changelogDate": "20211127053930"
+}

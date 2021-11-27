@@ -1,0 +1,9 @@
+{
+  "shoppingApp": {
+    "PersonRole": {
+      "null": "",
+      "ADMIN": "ADMIN",
+      "USER": "USER"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+
+application {
+  config {
+    baseName shopping,
+    applicationType monolith,
+    packageName ca.ucalgary.assignment,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework react
+  }
+  entities *
+}
+
+
+entity Person {
+	username String required
+    name String
+    role PersonRole
+    createdAt Instant required
+}
+
+entity ShoppingGroup {
+	name String required
+    createdAt Instant required
+}
+
+entity Need {
+	createdAt Instant required
+    quantity Integer required
+    deadline Instant
+}
+
+entity Item {
+	name String required
+    price Integer
+    createdAt Instant required
+    picture String
+    state	ItemState
+}
+
+enum PersonRole {
+  ADMIN
+  USER
+}
+
+enum ItemState {
+  AVAILABLE
+  NOT_AVAILABLE
+  SOLD_OUT
+}
+
+relationship OneToMany {
+	ShoppingGroup to Item{group}
+    Person to ShoppingGroup{createdBy}
+    Person to Item{owner}
+}
+
+relationship ManyToOne {
+	Need{person} to Person
+    Need{item} to Item
+}
+
+relationship ManyToMany {
+	Person{interests} to Item{interestedPersons}
+    Person{subscriptions} to ShoppingGroup{subscribedPersons}
+    Person{joined} to ShoppingGroup{joinedPersons}
+}
+
+
+paginate Person, ShoppingGroup, Need, Item with pagination
+
+service all with serviceImpl

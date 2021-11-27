@@ -1,0 +1,32 @@
+{
+  "shoppingApp": {
+    "person": {
+      "home": {
+        "title": "People",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Person",
+        "createOrEditLabel": "Create or edit a Person",
+        "notFound": "No People found"
+      },
+      "created": "A new Person is created with identifier {{ param }}",
+      "updated": "A Person is updated with identifier {{ param }}",
+      "deleted": "A Person is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Person {{ id }}?"
+      },
+      "detail": {
+        "title": "Person"
+      },
+      "id": "ID",
+      "username": "Username",
+      "name": "Name",
+      "role": "Role",
+      "createdAt": "Created At",
+      "shoppingGroup": "Shopping Group",
+      "item": "Item",
+      "interests": "Interests",
+      "subscriptions": "Subscriptions",
+      "joined": "Joined"
+    }
+  }
+}
